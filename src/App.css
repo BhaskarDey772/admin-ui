@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+/* search field */
+.search-field {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  outline: none;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-field input {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  border: none;
+  outline: none;
+}
+
+/* 
+.edit-modal {
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+
+} */
+
+.active {
+  background-color:#0d6efd;
+  color: #fff;
+  transition: 0.1s ease-in-out;
+}
+.pagination{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 1rem;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination button{
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
